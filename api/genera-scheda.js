@@ -4,8 +4,13 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-    if (req.method === 'OPTIONS') return res.status(200).end();
-    if (req.method !== 'POST') return res.status(405).json({ success: false, error: 'Method not allowed' });
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
+    if (req.method !== 'POST') {
+        return res.status(405).json({ success: false, error: 'Method not allowed' });
+    }
 
     const { nome, esperienza, obbiettivo, disponibilita, preferenza } = req.body;
 
@@ -36,9 +41,14 @@ Struttura la scheda per giorni, con serie, ripetizioni, riscaldamento e consigli
         const data = await apiResponse.json();
         const scheda = data.choices?.[0]?.message?.content || "Errore nella generazione.";
 
-        res.status(200).json({ success: true, scheda });
+        return res.status(200).json({ success: true, scheda });
+
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ success: false, error: "Errore server" });
+        console.error("Errore LLM:", error);
+        return res.status(500).json({ success: false, error: "Errore server" });
     }
 }
+
+
+
+
