@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti | Beta Gym</title>
+    <link rel="stylesheet" href="../css/site.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a class="brand" href="../index.html">
+                <img src="../img/logo.png" alt="Logo Beta Gym" class="logo">
+                <div>
+                    <h1>Beta Gym</h1>
+                    <p>Palestra & Wellness</p>
+                </div>
+            </a>
+            <div class="navbar">
+                <nav>
+                    <a href="../index.html">Home</a>
+                    <a href="chiSiamo.html">Chi siamo</a>
+                    <a href="servizi-abbonamenti.html">Servizi</a>
+                    <a href="generaScheda.html">Genera Scheda</a>
+                    <a href="prenotazioni.html">Prenotazioni</a>
+                    <a href="contatti.html">Contatti</a>
+                    <div class="theme-switcher">
+                        <label for="tema" class="theme-label">Tema</label>
+                        <select id="tema" aria-label="Seleziona tema">
+                            <option value="chiaro">Chiaro</option>
+                            <option value="scuro">Scuro</option>
+                        </select>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="page-header">
+                <h1>Contattaci</h1>
+                <p>Hai domande o vuoi prenotare una prova? Scrivi qui sotto e risponderemo nel più breve tempo possibile.</p>
+            </div>
+            <div class="grid-2">
+                <div>
+                    <form class="contact-form" id="contact-form">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Inserisci il tuo numero">
+
+                        <label for="messaggio">Messaggio</label>
+                        <textarea id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+
+                        <button type="submit">Invia Richiesta</button>
+                    </form>
+                    <div id="tabella" style="display:none; margin-top:16px;"></div>
+                </div>
+                <article class="card card-article">
+                    <h3>Informazioni utili</h3>
+                    <p>Beta Gym è pronto a supportarti con corsi, allenamenti e consulenze. Il nostro staff risponde rapidamente alle richieste via email e telefono.</p>
+                    <small>Email: info@betagym.it<br>Telefono: +39 012 345 6789<br>Indirizzo: Via del Benessere 10, Milano</small>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div>
+                <h3>Beta Gym</h3>
+                <p>Luogo di allenamento, benessere e supporto personalizzato per ogni obiettivo.</p>
+            </div>
+            <div class="site-footer__links">
+                <a href="../index.html">Home</a>
+                <a href="chiSiamo.html">Chi siamo</a>
+                <a href="servizi-abbonamenti.html">Servizi</a>
+                <a href="prenotazioni.html">Prenotazioni</a>
+                <a href="contatti.html">Contatti</a>
+            </div>
+            <div>
+                <p>Email: info@betagym.it</p>
+                <p>Telefono: +39 012 345 6789</p>
+            </div>
+        </div>
+        <div class="site-footer__bottom">© 2026 Beta Gym. Tutti i diritti riservati.</div>
+    </footer>
+    <script src="../addOn/contatti&prenotazioni.js"></script>
+    <script src="../addOn/tema.js"></script>
+
+</body>
+
+</html>

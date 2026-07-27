@@ -1,0 +1,132 @@
+.header {
+    background: var(--primo);
+    color: white;
+    padding: 14px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.header__inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.brand .logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+    padding: 6px;
+    transition: transform 0.3s ease;
+}
+
+.brand:hover .logo {
+    transform: scale(1.05);
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.brand p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.85;
+    font-weight: 500;
+}
+
+.navbar {
+    margin-left: auto;
+}
+
+.navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.25s ease;
+}
+
+.navbar a:hover {
+    background: var(--secondo);
+    color: #ffffff;
+    border-color: var(--secondo);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(53, 152, 198, 0.3);
+}
+
+.navbar a.nav-link--active {
+    background: var(--secondo);
+    color: #ffffff;
+    font-weight: 700;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 14px rgba(53, 152, 198, 0.4);
+}
+
+.navbar .theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 8px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar .theme-label {
+    color: #ffffff;
+    font-size: 0.825rem;
+    font-weight: 600;
+}
+
+.navbar select {
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    background: var(--superficie);
+    color: var(--testo);
+    font-size: 0.825rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+main {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
